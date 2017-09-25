@@ -66,7 +66,7 @@ socket.on('connect', function(){
 			var Status = row.insertCell(5);
 			Status.classList.add('Status');
 			Status.innerHTML = departure.status;
-			if(departure.status == "On Time" || departure.status == "Now Boarding")
+			if(departure.status == "On Time" || departure.status == "Now Boarding" || "All Aboard")
 				Status.classList.add("OnTime");
 			else
 				Status.classList.add("Late");
