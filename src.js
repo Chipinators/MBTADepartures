@@ -44,7 +44,7 @@ socket.on('connect', function(){
 			//Time
 			var Schedule = row.insertCell(1);
 			Schedule.classList.add('Schedule');
-			Schedule.innerHTML = departure.scheduledTime;
+			Schedule.innerHTML = GetTime(departure.scheduledTime);
 
 			//Destination
 			var Destination = row.insertCell(2);
