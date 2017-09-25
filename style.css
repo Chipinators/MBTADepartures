@@ -5,13 +5,14 @@ body{
 table{
 	width:  50%;
 	height: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 
 	color: white;
 	font: 1em Courier;
 	font-weight: bold;
 	text-align: center;	
 	text-align: center;
+	text-transform: uppercase;
 }
 
 td{
@@ -75,3 +76,6 @@ td{
 	text-align: right;
 }
 
+#NCurrentWeekDay, #SCurrentWeekDay {
+	text-transform: Capitalize;
+}
