@@ -4,9 +4,12 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "es6-promise": "^4.1.1",
     "express": "^4.15.5",
     "fs": "0.0.1-security",
+    "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.2.1",
+    "node-fetch": "^1.7.3",
     "socket.io": "^2.0.3"
   },
   "devDependencies": {},

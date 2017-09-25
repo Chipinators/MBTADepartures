@@ -25,9 +25,10 @@ socket.on('connect', function(){
 	socket.on('departures', function(departures){
 		var northTable = document.getElementById("northStationdeparturesTable");
 		var southTable = document.getElementById("southStationdeparturesTable");
+		clearTable(northTable);
+		clearTable(southTable);
 		var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 		while(departure = departures.shift()){
-			
 			if(departure.origin == "North Station"){
 				var row = northTable.insertRow(-1);
 			}
@@ -66,13 +67,15 @@ socket.on('connect', function(){
 			var Status = row.insertCell(5);
 			Status.classList.add('Status');
 			Status.innerHTML = departure.status;
-			if(departure.status == "On Time" || departure.status == "Now Boarding" || "All Aboard")
-				Status.classList.add("OnTime");
-			else
+			console.log("Departure Status: " + departure.status)
+			if(departure.status == "Delayed" || departure.status == "Late" || departure.status == "Hold" || departure.status == "Cancelled"){
 				Status.classList.add("Late");
+			}
+			else{
+				Status.classList.add("OnTime");
+			}
 
 			var date = new Date(0);
-			console.log(departure.timeStamp);
 			date.setUTCSeconds(departure.timeStamp);
 			
 			document.getElementById("NCurrentWeekDay").innerHTML = days[date.getDay()];
@@ -91,3 +94,8 @@ socket.on('connect', function(){
 	});
 });
 
+function clearTable(table){
+	while(table.rows.length > 3){
+		table.deleteRow(table.rows.length-1);
+	}
+}
