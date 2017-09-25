@@ -26,7 +26,7 @@ socket.on('connect', function(){
 		var northTable = document.getElementById("northStationdeparturesTable");
 		var southTable = document.getElementById("southStationdeparturesTable");
 		var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-		while(departure = departures.pop()){
+		while(departure = departures.shift()){
 			
 			if(departure.origin == "North Station"){
 				var row = northTable.insertRow(-1);
