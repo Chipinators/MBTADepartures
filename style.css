@@ -1,0 +1,77 @@
+body{
+	background-color: black;
+}
+
+table{
+	width:  50%;
+	height: 100%;
+	margin-bottom: 20px;
+
+	color: white;
+	font: 1em Courier;
+	font-weight: bold;
+	text-align: center;	
+	text-align: center;
+}
+
+td{
+	color: #ffff91;
+	font: 1em Courier;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.Carrier {
+	text-align: left;
+	width: 10%;
+}
+
+.Schedule {
+	text-align: right;
+	width: 10%;
+}
+
+.Destination {
+	text-align: left;
+	width: 40%;
+}
+
+.Trip {
+	text-align: left;
+	width: 10%;
+}
+
+.Track {
+	text-align: center;
+	width: 10%;
+}
+
+.Status {
+	text-align: left;
+	width: 20%;
+}
+
+.OnTime {
+	color: #acff36;
+}
+
+.Late {
+	color: #ff3636;
+}
+
+.TableHeader {
+	color: white;
+	font: 1.2em Courier;
+	font-weight: bold;
+}
+
+#NCurrentWeekDay, #NCurrentDate, #SCurrentWeekDay, #SCurrentDate {
+	color: #ffff91;
+	text-align: left;
+}
+
+#NCurrentTime, #NCurrentTimeHead, #SCurrentTime, #SCurrentTimeHead {
+	color: #ffff91;
+	text-align: right;
+}
+

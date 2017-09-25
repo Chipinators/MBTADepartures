@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+	<table id="northStationdeparturesTable">
+		<tr>
+			<td class="TableHeader" id="NCurrentWeekDay"></td>
+			<td class="TableHeader" colspan="4" >NORTH STATION INFORMATION</td>
+			<td class="TableHeader" id="NCurrentTimeHead">CURRENT TIME</td>
+		</tr>
+		<tr>
+			<td class="TableHeader" colspan="2" id="NCurrentDate"></td>
+			<td class="TableHeader" colspan="3"</td>
+			<td class="TableHeader" id="NCurrentTime"></td>
+		</tr>
+		<tr>
+			<th>Carrier</th>
+			<th>Time</th>
+			<th>Destination</th>
+			<th>Train #</th>
+			<th>Track #</th>
+			<th>Status</th>
+		</tr>
+	</table>
+
+	<table id="southStationdeparturesTable">
+		<tr>
+			<td class="TableHeader" id="SCurrentWeekDay"></td>
+			<td class="TableHeader" colspan="4" >SOUTH STATION INFORMATION</td>
+			<td class="TableHeader" id="SCurrentTimeHead">CURRENT TIME</td>
+		</tr>
+		<tr>
+			<td class="TableHeader" colspan="2" id="SCurrentDate"></td>
+			<td class="TableHeader" colspan="3"</td>
+			<td class="TableHeader" id="SCurrentTime"></td>
+		</tr>
+		<tr>
+			<th>Carrier</th>
+			<th>Time</th>
+			<th>Destination</th>
+			<th>Train #</th>
+			<th>Track #</th>
+			<th>Status</th>
+		</tr>
+	</table>
+</body>
+<script src="src.js"></script>
+</html>
