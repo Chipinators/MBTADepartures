@@ -23,7 +23,7 @@ io.on('connection', function(socket){
 });
 
 getData();
-setInterval(getData, 1000);
+setInterval(getData, (15*1000));
 
 function getData(){
 	fetch('http://developer.mbta.com/lib/gtrtfs/Departures.csv')

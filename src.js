@@ -20,8 +20,6 @@ function GetFormattedDate(date) {
 
 socket = io();
 socket.on('connect', function(){
-	console.log("Connected to Server");
-
 	socket.on('departures', function(departures){
 		var northTable = document.getElementById("northStationdeparturesTable");
 		var southTable = document.getElementById("southStationdeparturesTable");
@@ -67,7 +65,6 @@ socket.on('connect', function(){
 			var Status = row.insertCell(5);
 			Status.classList.add('Status');
 			Status.innerHTML = departure.status;
-			console.log("Departure Status: " + departure.status)
 			if(departure.status == "Delayed" || departure.status == "Late" || departure.status == "Hold" || departure.status == "Cancelled"){
 				Status.classList.add("Late");
 			}
